@@ -1,0 +1,17 @@
+from distributions import Gaussian, Distribution
+
+# Create a Distribution instance
+dist = Distribution()
+
+# Read data from a file
+dist.read_data_file("data.txt")
+
+# Create a Gaussian instance based on the Distribution instance
+gaussian = Gaussian(dist.mean, dist.stdev)
+
+# Use the Gaussian instance as needed
+gaussian.calculate_mean()
+gaussian.calculate_stdev()
+gaussian.plot_histogram()
+gaussian.plot_histogram_pdf()
+# ... other operations with the Gaussian instance
